@@ -14,3 +14,30 @@
 /* Keep calendar cells and fieldset content within narrow booking cards. */
 .hero-grid>*{min-width:0}.calendar-grid{grid-template-columns:repeat(7,minmax(0,1fr))}.date-button{min-width:0}.time-section{min-inline-size:0}.time-section legend{max-width:100%}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Native-style mobile web shell with iPhone safe-area support. */
+.nav-icon{display:none}
+@media(max-width:760px){
+html{background:var(--paper);scroll-padding-top:16px}
+body{min-height:100dvh;padding-bottom:calc(74px + env(safe-area-inset-bottom));overscroll-behavior-y:none}
+.preview-banner{padding-top:max(7px,env(safe-area-inset-top))}
+.site-header{display:grid;grid-template-columns:1fr;justify-items:center;width:100%;padding:14px 18px 16px;gap:12px;background:var(--paper)}
+.brand{display:flex;flex-direction:column;align-items:center;text-align:center}
+.brand-wordmark{width:min(230px,72vw)}
+.brand-subtitle{margin-left:0;text-align:center;font-size:7.5px;letter-spacing:1.1px}
+.nav-book{order:2;width:min(430px,100%);min-height:48px;margin:0;padding:12px 18px;justify-content:center;gap:12px;border-radius:10px;font-size:14px;box-shadow:0 8px 22px #285f6318}
+.site-header nav{position:fixed;z-index:50;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:4px;padding:7px max(10px,env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));background:rgba(255,254,251,.96);border-top:1px solid var(--line);box-shadow:0 -8px 24px #17343614;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.site-header nav>a:not(.button){display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:50px;padding:4px 2px;color:var(--muted);font-size:11px;font-weight:700;line-height:1.15;text-align:center;text-decoration:none;border-radius:8px}
+.site-header nav>a:hover,.site-header nav>a:focus-visible{color:var(--accent);background:var(--surface);text-decoration:none}
+.nav-icon{display:grid;place-items:center;width:22px;height:22px;color:var(--accent);font-size:17px;font-weight:800;line-height:1}
+.hero-section{padding-top:16px}
+.hero-grid{display:flex;flex-direction:column}
+.scheduler{order:-1;width:100%;scroll-margin-top:16px}
+.hero-story{order:1}
+#approach,#about,#questions{scroll-margin-top:16px}
+.footer{padding-bottom:24px}
+}
+@media(max-width:360px){
+.site-header nav>a:nth-child(2){display:flex}
+.brand-wordmark{width:min(215px,70vw)}
+}
