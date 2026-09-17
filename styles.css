@@ -32,8 +32,10 @@ body{min-height:100dvh;padding-bottom:calc(74px + env(safe-area-inset-bottom));o
 .nav-icon{display:grid;place-items:center;width:22px;height:22px;color:var(--accent);font-size:17px;font-weight:800;line-height:1}
 .hero-section{padding-top:16px}
 .hero-grid{display:flex;flex-direction:column}
-.scheduler{order:-1;width:100%;scroll-margin-top:16px}
-.hero-story{order:1}
+.hero-story{order:0}
+.hero-anatomy{display:block;height:210px;margin-top:22px}
+.hero-anatomy img{object-position:center 37%}
+.scheduler{order:0;width:100%;scroll-margin-top:16px}
 #approach,#about,#questions{scroll-margin-top:16px}
 .footer{padding-bottom:24px}
 }
